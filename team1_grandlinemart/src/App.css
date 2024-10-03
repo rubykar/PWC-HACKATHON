@@ -28,6 +28,7 @@
 .messages {
   display: flex;
   justify-content: center;
+  color: red;
 }
 
 .error {
