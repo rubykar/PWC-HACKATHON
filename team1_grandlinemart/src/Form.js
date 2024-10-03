@@ -2,12 +2,13 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../src/firebase";
 
-
 export default function Form() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
+  const [role, setRole] = useState("");
+
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -77,7 +78,6 @@ export default function Form() {
           value={password}
           type="password"
         />
-
         <button onClick={onLogin} className="btn" type="submit">
           Login
         </button>
